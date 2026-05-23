@@ -1,0 +1,60 @@
+{
+  "$schema": "CDS component registry — enumerate all foundations without reading every spec file",
+  "components": [],
+  "foundations": [
+    {
+      "name": "Colors",
+      "spec": "specs/foundation-colors.json",
+      "tokenFile": "src/lib/tokens.ts",
+      "dtcgFile": "tokens.json",
+      "docPage": "/foundation/colors"
+    },
+    {
+      "name": "Typography",
+      "spec": "specs/foundation-typography.json",
+      "tokenFile": "src/lib/tokens.ts",
+      "dtcgFile": "tokens.json",
+      "docPage": "/foundation/typography"
+    },
+    {
+      "name": "Spacing",
+      "spec": "specs/foundation-spacing.json",
+      "tokenFile": "src/lib/tokens.ts",
+      "dtcgFile": "tokens.json",
+      "docPage": "/foundation/spacing"
+    },
+    {
+      "name": "Shadows",
+      "spec": "specs/foundation-shadows.json",
+      "tokenFile": "src/lib/tokens.ts",
+      "dtcgFile": "tokens.json",
+      "docPage": "/foundation/shadows"
+    },
+    {
+      "name": "Icons",
+      "spec": "specs/foundation-icons.json",
+      "docPage": "/foundation/icons"
+    }
+  ],
+  "tokens": {
+    "source": "src/lib/tokens.ts",
+    "dtcg": "tokens.json",
+    "regenerate": "npm run export-tokens"
+  },
+  "nativePackages": {
+    "flutter": {
+      "path": "CDS-Flutter/",
+      "type": "DartPackage",
+      "packageName": "cds",
+      "sdkConstraint": ">=3.0.0 <4.0.0",
+      "entryPoint": "CDS-Flutter/lib/cds.dart",
+      "build": "cd CDS-Flutter && flutter pub get"
+    }
+  },
+  "snapshots": {
+    "directory": "public/snapshots/",
+    "generate": "npm run snapshots",
+    "requires": "npm run dev  # dev server must be running on port 3000",
+    "selector": "[data-testid='component-preview']"
+  }
+}
