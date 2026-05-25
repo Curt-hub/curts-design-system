@@ -10,15 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         // ── Brand ─────────────────────────────────────────────
-        // TODO: update once brand color is set in tokens.ts
-        brand:          '#000000',
-        'brand-subtle': '#f0f0f0',
+        brand:          '#1F2A24',  // Pickle dark forest green
+        'brand-accent': '#D1F1B3',  // Pickle mint accent
+        'brand-subtle': '#E6F7D4',  // mint tint
 
         // ── Backgrounds ───────────────────────────────────────
         background:            '#FFFFFF',
         'background-elevated': '#F7F7F8',
         'background-sunken':   '#F9F9FC',
-        'background-dark':     '#111111', // TODO: update once darkSurface is set
+        'background-dark':     '#1F2A24',
 
         // ── Text & icons ──────────────────────────────────────
         'on-background':           '#000000',
@@ -40,7 +40,6 @@ const config: Config = {
         info:             '#045DEC',
       },
       fontFamily: {
-        // TODO: replace 'Poppins' with your chosen font
         poppins: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
       },
       borderRadius: {
@@ -60,7 +59,7 @@ const config: Config = {
         'top-d':       '0px -2px 15px 0px rgba(0,0,0,0.10)',
         'side-nav':    '4px 0px 15px 0px rgba(0,0,0,0.20)',
         'tiles-active': '0px 10px 15px -3px rgba(0,0,0,0.10)',
-        'tiles-hover':  '0px 10px 15px -3px rgba(0,0,0,0.20)',
+        'tiles-hover':  '0px 10px 15px -3px rgba(31,42,36,0.30)',
       },
     },
   },

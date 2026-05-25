@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 export default function SignInClient() {
@@ -10,24 +11,20 @@ export default function SignInClient() {
   }
 
   return (
-    <div className="min-h-screen bg-[#111111] flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#1F2A24' }}>
       <div className="bg-white rounded-2xl p-10 w-full max-w-sm shadow-2xl flex flex-col items-center gap-6">
 
-        {/* Wordmark */}
         <div className="flex flex-col items-center gap-4">
-          <span style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: 32, letterSpacing: '-0.02em', color: '#111111' }}>
-            CDS
-          </span>
+          <Image src="/logo/logo.svg" alt="Pickle" width={64} height={64} style={{ borderRadius: 14 }} />
           <p className="text-gray-400 text-sm text-center leading-relaxed">
             {"Curt's Design System — token documentation and foundations."}
           </p>
         </div>
 
-        {/* Enter button */}
         <button
           onClick={enter}
-          className="w-full flex items-center justify-center bg-black hover:bg-[#333] text-white font-semibold rounded-xl py-3 px-4 transition-colors"
-          style={{ fontFamily: 'Poppins, sans-serif' }}
+          className="w-full flex items-center justify-center font-semibold rounded-xl py-3 px-4 transition-opacity hover:opacity-90"
+          style={{ fontFamily: 'Poppins, sans-serif', backgroundColor: '#1F2A24', color: '#D1F1B3' }}
         >
           Enter
         </button>

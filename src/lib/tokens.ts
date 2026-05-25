@@ -5,13 +5,12 @@
 // ─────────────────────────────────────────────────────────────
 
 const palette = {
-  brand:    '#000000',  // TODO: set your brand color
-  darkSurface: '#111111', // TODO: set your dark surface color (nav, hero backgrounds)
+  brand:       '#1F2A24',  // Pickle dark forest green
+  brandAccent: '#D1F1B3',  // Pickle mint accent
 
   black:    '#000000',
   offBlack: '#595959',
   greyA:    '#AAACB0',
-  greyB:    '#BABCBF',
   greyC:    '#CDCED0',
   greyD:    '#DDDDDF',
   greyE:    '#EFF0F0',
@@ -33,20 +32,21 @@ const palette = {
 //   background*   — surface backgrounds
 //   on*           — text / icons that sit on top of a background
 //   outline*      — borders and dividers
-//   brand*        — brand colour and tints
+//   brand*        — brand colours and tints
 //   success/error/warning/info + *Subtle — status colours
 // ─────────────────────────────────────────────────────────────
 
 export const colors = {
-  // Brand — TODO: update once brand color is set
-  brand:              palette.brand,      // dark: palette.brand  (unchanged)
-  brandSubtle:        '#f0f0f0',          // TODO: set brand subtle tint. dark: set dark tint
+  // Brand
+  brand:       palette.brand,        // primary interactive — buttons, links, active states
+  brandAccent: palette.brandAccent,  // highlight on dark surfaces — use on backgroundDark
+  brandSubtle: '#E6F7D4',            // mint tint — backgrounds behind brand elements
 
   // Backgrounds (light → dark mappings in comments)
-  background:         palette.white,      // dark: palette.darkSurface
-  backgroundElevated: palette.greyF,     // dark: '#0a0a0a'
-  backgroundSunken:   '#F9F9FC',          // dark: '#050505'
-  backgroundDark:     palette.darkSurface, // invariant — always dark (nav, hero)
+  background:         palette.white,   // dark: palette.brand
+  backgroundElevated: palette.greyF,   // dark: '#0a0a0a'
+  backgroundSunken:   '#F9F9FC',        // dark: '#050505'
+  backgroundDark:     palette.brand,   // invariant — always dark (nav, hero). Same hex as brand.
 
   // Text & icon colours
   onBackground:          palette.black,    // dark: palette.white
@@ -57,10 +57,10 @@ export const colors = {
   outline:       palette.greyC,  // dark: 'rgba(255,255,255,0.15)'
   outlineSubtle: palette.greyE,  // dark: 'rgba(255,255,255,0.06)'
 
-  // Misc component-specific
+  // Misc
   loaderTrack: palette.greyD,   // invariant
 
-  // Status — action colours (invariant between light/dark)
+  // Status
   success:       palette.green,
   successSubtle: '#E8F5E9',     // dark: '#0d3320'
   successStrong: '#4CAF50',
@@ -118,7 +118,7 @@ export const shadows = {
   topD:    '0px -2px 15px 0px rgba(0,0,0,0.10)',
   sideNav:      '4px 0px 15px 0px rgba(0,0,0,0.20)',
   tilesActive:  '0px 10px 15px -3px rgba(0,0,0,0.10)',
-  tilesHover:   '0px 10px 15px -3px rgba(0,0,0,0.20)', // TODO: set brand-colored hover shadow
+  tilesHover:   '0px 10px 15px -3px rgba(31,42,36,0.30)',
 };
 
 // ─────────────────────────────────────────────────────────────

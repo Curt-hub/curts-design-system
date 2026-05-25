@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32"><text x="0" y="24" font-family="sans-serif" font-size="20" font-weight="bold" fill="currentColor">CDS</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="26" fill="#1F2A24"/>
+  <path
+    fill="none"
+    stroke="#D1F1B3"
+    stroke-width="5.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M 65 31 C 74 33 89 47 90 56 C 91 65 82 83 73 87 C 64 91 45 88 38 81 C 32 74 30 54 34 46 C 39 38 56 29 65 31 Z"
+  />
+  <g fill="#D1F1B3">
+    <ellipse cx="60" cy="48" rx="3.5" ry="12" transform="rotate(0 60 60)"/>
+    <ellipse cx="60" cy="48" rx="3.5" ry="12" transform="rotate(72 60 60)"/>
+    <ellipse cx="60" cy="48" rx="3.5" ry="12" transform="rotate(144 60 60)"/>
+    <ellipse cx="60" cy="48" rx="3.5" ry="12" transform="rotate(216 60 60)"/>
+    <ellipse cx="60" cy="48" rx="3.5" ry="12" transform="rotate(288 60 60)"/>
+  </g>
+</svg>

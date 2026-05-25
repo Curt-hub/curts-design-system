@@ -54,8 +54,8 @@ function fontWeight(value: number): DtcgToken {
 // ─── palette (Tier 1) — included for reference, not for direct use ────────────
 
 const palette: DtcgGroup = {
-  brand:       color('#000000', 'Raw brand color. TODO: set. Use colors.brand instead.'),
-  darkSurface: color('#111111', 'Raw dark surface. TODO: set. Use colors.backgroundDark instead.'),
+  brand:       color('#1F2A24', 'Pickle dark forest green. Use colors.brand instead.'),
+  brandAccent: color('#D1F1B3', 'Pickle mint accent. Use colors.brandAccent instead.'),
   black:    color('#000000'),
   offBlack: color('#595959'),
   greyA:    color('#AAACB0'),
@@ -73,13 +73,14 @@ const palette: DtcgGroup = {
 // ─── semantic colors (Tier 2) ─────────────────────────────────────────────────
 
 const colorTokens: DtcgGroup = {
-  brand:       color(colors.brand,       'TODO: set brand color. dark: brand (unchanged)'),
-  brandSubtle: color(colors.brandSubtle, 'TODO: set brand subtle tint. dark: set dark tint'),
+  brand:       color(colors.brand,       'Pickle dark forest green — primary interactive color'),
+  brandAccent: color(colors.brandAccent, 'Pickle mint — use on dark surfaces (backgroundDark)'),
+  brandSubtle: color(colors.brandSubtle, 'Mint tint — backgrounds behind brand elements'),
 
   background:         color(colors.background,         'dark: colors.backgroundDark'),
   backgroundElevated: color(colors.backgroundElevated, 'dark: #0a0a0a'),
   backgroundSunken:   color(colors.backgroundSunken,   'dark: #050505'),
-  backgroundDark:     color(colors.backgroundDark,     'invariant — always dark surface'),
+  backgroundDark:     color(colors.backgroundDark,     'Pickle dark green — nav, hero. Same hex as brand, distinct semantic role.'),
 
   onBackground:          color(colors.onBackground,          'dark: #FFFFFF'),
   onBackgroundSecondary: color(colors.onBackgroundSecondary, 'dark: rgba(255,255,255,0.70)'),
