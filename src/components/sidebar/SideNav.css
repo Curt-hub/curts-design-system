@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────
-   SideNav — Pickle brand colours
+   SideNav — ported from purple-storybook SideNavigation
    Light mode, hard-coded values
    ───────────────────────────────────────────────────────────── */
 
@@ -47,16 +47,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(31, 42, 36, 0.4);
+  color: rgba(1, 22, 56, 0.4);
   padding: 0;
   transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .side-nav__toggle:hover {
-  background-color: #D1F1B3;
-  color: #1F2A24;
-  border-color: #D1F1B3;
-  box-shadow: 0 2px 12px rgba(31, 42, 36, 0.20);
+  background-color: #7458fd;
+  color: #ffffff;
+  border-color: #7458fd;
+  box-shadow: 0 2px 12px rgba(116, 88, 253, 0.35);
 }
 
 .side-nav__toggle-chevron {
@@ -80,6 +80,7 @@
   overflow-y: auto;
   flex: 1;
   padding-bottom: 16px;
+  /* hide scrollbar */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -100,12 +101,13 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 64px;
+  height: 64px; /* 20px top pad + 28px content + 16px bottom pad */
   box-sizing: border-box;
   text-decoration: none;
   flex-shrink: 0;
 }
 
+/* Both mark and title sit at the same position — crossfade only, nothing moves */
 .side-nav__logo-mark,
 .side-nav__logo-title {
   position: absolute;
@@ -128,7 +130,7 @@
 }
 
 .side-nav__logo-title {
-  gap: 8px;
+  gap: 6px;
   white-space: nowrap;
   opacity: 1;
   transition: opacity 0.25s ease;
@@ -137,6 +139,20 @@
 .side-nav--collapsed .side-nav__logo-title {
   opacity: 0;
   pointer-events: none;
+}
+
+.side-nav__ui-text {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px #011638;
+  white-space: nowrap;
+  flex-shrink: 0;
+  /* Compensate for Poppins cap-height offset so caps align with icon center */
+  display: inline-block;
+  transform: translateY(0.1em);
 }
 
 /* ── Nav links ─────────────────────────────────────────────── */
@@ -167,7 +183,7 @@
   font-size: 10px;
   line-height: normal;
   letter-spacing: 1.2px;
-  color: rgba(31, 42, 36, 0.35);
+  color: rgba(1, 22, 56, 0.35);
   text-transform: uppercase;
   white-space: nowrap;
   padding: 0 12px;
@@ -215,12 +231,12 @@
 }
 
 .side-nav__link:hover:not(.side-nav__link--active) {
-  background-color: rgba(31, 42, 36, 0.06);
+  background-color: rgba(116, 88, 253, 0.07);
 }
 
 .side-nav__link--active {
-  background-color: #1F2A24;
-  box-shadow: 0px 2px 12px rgba(31, 42, 36, 0.25);
+  background-color: #7458fd;
+  box-shadow: 0px 2px 12px rgba(116, 88, 253, 0.30);
 }
 
 .side-nav__link-name {
@@ -241,18 +257,18 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-  color: rgba(31, 42, 36, 0.4);
+  color: rgba(1, 22, 56, 0.4);
 }
 
 .side-nav__link--active .side-nav__link-icon {
-  color: #D1F1B3;
+  color: #ffffff;
 }
 
 .side-nav__link-label {
   font-family: Poppins, sans-serif;
   font-weight: 600;
   font-size: 12px;
-  color: rgba(31, 42, 36, 0.6);
+  color: rgba(1, 22, 56, 0.6);
   white-space: nowrap;
   overflow: hidden;
   max-width: 140px;

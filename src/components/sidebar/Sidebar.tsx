@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import './SideNav.css';
 
@@ -50,11 +49,11 @@ const nav = [
   {
     section: 'Foundation',
     items: [
-      { label: 'Colors',     href: '/foundation/colors',     icon: <ColorsIcon /> },
-      { label: 'Typography', href: '/foundation/typography', icon: <TypographyIcon /> },
-      { label: 'Spacing',    href: '/foundation/spacing',    icon: <SpacingIcon /> },
-      { label: 'Icons',      href: '/foundation/icons',      icon: <IconsIcon /> },
-      { label: 'Shadows',    href: '/foundation/shadows',    icon: <ShadowsIcon /> },
+      { label: 'Colors',      href: '/foundation/colors',      icon: <ColorsIcon /> },
+      { label: 'Typography',  href: '/foundation/typography',  icon: <TypographyIcon /> },
+      { label: 'Spacing',     href: '/foundation/spacing',     icon: <SpacingIcon /> },
+      { label: 'Icons',       href: '/foundation/icons',       icon: <IconsIcon /> },
+      { label: 'Shadows',     href: '/foundation/shadows',     icon: <ShadowsIcon /> },
     ],
   },
 ];
@@ -66,6 +65,7 @@ export function Sidebar({ collapsed = false, onToggle }: SidebarProps) {
 
   return (
     <div className={['side-nav', collapsed ? 'side-nav--collapsed' : ''].filter(Boolean).join(' ')}>
+      {/* Toggle button */}
       <button
         className="side-nav__toggle"
         onClick={onToggle}
@@ -84,14 +84,13 @@ export function Sidebar({ collapsed = false, onToggle }: SidebarProps) {
           {/* Header / Logo */}
           <div className="side-nav__header">
             <Link href="/" className="side-nav__logo">
-              {/* Collapsed: icon mark only */}
-              <div className="side-nav__logo-mark">
-                <Image src="/logo/logo.svg" alt="Pickle" width={36} height={36} style={{ borderRadius: 8 }} />
+              {/* Always-visible icon mark */}
+              <div className="side-nav__logo-mark" style={{ width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ fontWeight: 700, fontSize: 13, letterSpacing: '-0.02em', color: '#111111' }}>CDS</span>
               </div>
-              {/* Expanded: icon + wordmark */}
+              {/* Wordmark — fades on collapse */}
               <div className="side-nav__logo-title">
-                <Image src="/logo/logo.svg" alt="Pickle" width={30} height={30} style={{ borderRadius: 7 }} />
-                <span style={{ fontWeight: 700, fontSize: 13, letterSpacing: '-0.01em', color: '#1F2A24', lineHeight: 1 }}>
+                <span style={{ fontWeight: 700, fontSize: 15, letterSpacing: '-0.02em', color: '#111111' }}>
                   {"Curt's Design System"}
                 </span>
               </div>

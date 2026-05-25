@@ -4,8 +4,10 @@ import 'package:flutter/painting.dart';
 // Only reference CDSColors in components, never raw hex.
 
 abstract class _Palette {
-  static const Color brand       = Color(0xFF1F2A24); // Pickle dark forest green
-  static const Color brandAccent = Color(0xFFD1F1B3); // Pickle mint accent
+  // TODO: set your brand color
+  static const Color brand = Color(0xFF000000);
+  // TODO: set your dark surface color (nav, hero backgrounds)
+  static const Color darkSurface = Color(0xFF111111);
 
   static const Color black    = Color(0xFF000000);
   static const Color offBlack = Color(0xFF595959);
@@ -22,16 +24,15 @@ abstract class _Palette {
 }
 
 abstract class CDSColors {
-  // Brand
-  static const Color brand       = _Palette.brand;       // primary — buttons, links, active states
-  static const Color brandAccent = _Palette.brandAccent; // highlight on dark surfaces
-  static const Color brandSubtle = Color(0xFFE6F7D4);    // mint tint — backgrounds behind brand elements
+  // Brand - TODO: update once brand color is set in tokens
+  static const Color brand       = _Palette.brand;
+  static const Color brandSubtle = Color(0xFFF0F0F0); // TODO: set brand subtle tint
 
   // Backgrounds
   static const Color background         = _Palette.white;
   static const Color backgroundElevated = _Palette.greyF;
   static const Color backgroundSunken   = Color(0xFFF9F9FC);
-  static const Color backgroundDark     = _Palette.brand; // invariant — same hex as brand, distinct role
+  static const Color backgroundDark     = _Palette.darkSurface; // invariant
 
   // Text & icon colours
   static const Color onBackground          = _Palette.black;
@@ -50,14 +51,14 @@ abstract class CDSColors {
   static const Color successSubtle = Color(0xFFE8F5E9);
   static const Color successStrong = Color(0xFF4CAF50);
 
-  // rgba(240,58,71,0.12) — alpha 0x1F
+  // rgba(240,58,71,0.12) — alpha 0x1F = round(0.12 * 255)
   static const Color error       = _Palette.red;
   static const Color errorSubtle = Color(0x1FF03A47);
 
   static const Color warning       = _Palette.yellow;
   static const Color warningSubtle = Color(0xFFFEFBE6);
 
-  // rgba(4,93,236,0.12) — alpha 0x1F
+  // rgba(4,93,236,0.12)
   static const Color info       = _Palette.blue;
   static const Color infoSubtle = Color(0x1F045DEC);
 }
